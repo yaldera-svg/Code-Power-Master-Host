@@ -1,11 +1,8 @@
 /* --- Body style HJ --- */
 body{
     background-color:  #E6DBD0;
-    padding-top: 32px;
-    padding-right: 32px;
-    padding-bottom:32px;
-    padding-left: 32px;
-    
+    padding: 32px;
+    margin: 0; 
 }
 
 
