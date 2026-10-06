@@ -76,3 +76,51 @@ body{
     margin: 0;
     color: #5D4954;
 }
+
+/* --- About Us css HJ --- */
+.about-heading {
+    text-align: center;
+    margin-bottom: 40px;
+
+}
+
+.about-heading h1 {
+    color: #5D4954;
+    font-size: 42px; 
+    margin-bottom: 10px; 
+}
+
+.about-heading p {
+    color: #5D4954;
+    font-size: 22px;
+    margin: 0;
+}
+
+.about-people {
+    display: flex;
+    gap: 30px;
+    max-width: 1200px; 
+    margin: 0 auto;
+} 
+
+/* Biography/individual boxes HJ */
+
+.person-box {
+    flex: 1;
+    background-color: #F5E9DF;
+    padding: 30px;
+    border-radius: 20px; 
+    box-sizing: border-box;
+}
+
+.person-box h2 {
+    color: #5D4954;
+    font-size: 30px;
+    margin: 0; 
+} 
+
+.person-box p {
+    font-size: 20px; 
+    line-height: 1.5;
+    margin-bottom: 0;
+}
