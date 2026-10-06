@@ -180,6 +180,17 @@ body{
     padding-left: 25px;
 } 
 
+
+/* --- Introbox css CF --- */
+.introduction-box {
+    background-color: #F5E9DF;
+    padding: 30px;
+    width: 100%;
+    border-radius: 20px;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+}
+
 /* --- Implicit, intersectionality, resources css CF --- */
 
 .implicit-box, .intersectionality-box, .resources-box { 
