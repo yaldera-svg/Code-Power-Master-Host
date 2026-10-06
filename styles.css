@@ -182,26 +182,25 @@ body{
 
 
 /* --- Introbox css CF --- */
-.introduction-box {
-    background-color: #F5E9DF;
-    padding: 30px;
-    width: 100%;
-    border-radius: 20px;
-    box-sizing: border-box;
-    margin-bottom: 30px;
-}
-
-/* --- Implicit, intersectionality, resources css CF --- */
-
+.introduction-box { 
+    background-color: #F5E9DF; 
+    padding: 30px; 
+    width: 100%; 
+    border-radius: 20px; 
+    box-sizing: border-box; 
+} 
+/* --- Implicit, Intersectionality, Resources boxes CF --- */ 
 .implicit-box, .intersectionality-box, .resources-box { 
     background-color: #F5E9DF; 
     padding: 30px; 
     width: 100%; 
     border-radius: 20px; 
     box-sizing: border-box; 
-    margin-bottom: 30px;
+} 
+/* --- Space between boxes CF --- */ 
+.introduction, .implicit, .intersectionality, .resources { 
+    margin-bottom: 30px; 
 }
-
 
 
 /* --- Mobile display adjustment HJ --- */
