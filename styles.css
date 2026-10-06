@@ -10,8 +10,6 @@ body{
 
 
 
-
-
 /* --- Content wrap style for index page CF --- */
 .content-wrap{
     width: calc(100% - 2rem);
@@ -33,5 +31,51 @@ body{
 
 .index-header h1,
 .index-header h3 {
+    color: #5D4954;
+}
+
+/* --- Quick Links HJ */
+.quick-links {
+    text-align: center;
+    padding: 30px 20px; 
+}
+.quick-links h2 {
+    color: #5D4954; 
+    font-size: 32px; 
+    margin-bottom: 25px; 
+}
+.quick-links ul {
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+}
+.quick-links li {
+    display: inline-block; 
+    background-color: #C98F8F;
+    color: white;
+    text-decoration: none; 
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 24px; 
+    border-radius: 12px;
+    transition: all 0.3s ease; 
+}
+.quick-links a:hover {
+    background-color: #A96F6F; 
+    transform: translateY(-3px);
+}
+/* --- Intro page css HJ --- */
+.intro-box {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 25px 35px;
+    background-color: #F5E9DF;
+    border-radius: 20px;
+    text-align: center; 
+}
+.intro-box p {
+    font-size: 24px;
+    line-height: 1.5;
+    margin: 0;
     color: #5D4954;
 }
