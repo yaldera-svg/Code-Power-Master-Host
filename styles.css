@@ -189,6 +189,45 @@ body{
     border-radius: 20px; 
     box-sizing: border-box; 
 } 
+.introduction-box h3,
+.implicit-box h2,
+.implicit-box h3,
+.intersectionality-box h2,
+.resources-box h3 {
+    color: #5D4954;
+}
+
+.introduction-box h3,
+.implicit-box h2,
+.intersectionality-box h2,
+.resources-box h3 {
+    font-size: 30px;
+    margin-top: 0;
+}
+
+.introduction-box p,
+.implicit-box p,
+.intersectionality-box p,
+.resources-box li {
+    color: #5D4954;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.implicit-box h3 {
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+.resources-box ul {
+    margin-top: 10px;
+    padding-left: 25px;
+}
+
+.resources-box a {
+    color: #5D4954;
+    text-decoration: underline;
+}
 /* --- Implicit, Intersectionality, Resources boxes CF --- */ 
 .implicit-box, .intersectionality-box, .resources-box { 
     background-color: #F5E9DF; 
