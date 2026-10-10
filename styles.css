@@ -180,6 +180,20 @@ body{
     padding-left: 25px;
 } 
 
+/* Janeya image CF */
+.hero-image {
+    text-align: center;
+    margin: 40px auto 0;
+    max-width: 1200px;
+}
+
+.hero-image img {
+    display: block;
+    width: min(100%, 420px);
+    margin: 0 auto;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(93, 73, 84, 0.15);
+}
 
 /* --- Introbox css CF --- */
 .introduction-box { 
