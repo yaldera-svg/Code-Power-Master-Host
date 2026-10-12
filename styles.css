@@ -18,11 +18,11 @@
 
 html {
     scroll-behavior: smooth;
-]
+}
     
 /* --- Body style HJ --- */
 body{ 
-    background: linear-gradient (
+    background: linear-gradient(
         135deg,
         #F0E2D6 0%,
         var(--page-bg) 55%,
@@ -43,17 +43,10 @@ main {
 
 /* --- Content wrap style for index page CF / responsive sizing edited HJ --- */
 .content-wrap{
-    /* width: calc(100% - 2rem); 
-    max-width: 950px; */
     width: min(100%, 950px);
     margin: 0 auto;
     text-align: center;
 }
-
-/* .index-page {
-    margin: 0;
-}
-*/
     
 .index-header {
     width: 100%;
@@ -63,9 +56,6 @@ main {
     border-radius: 4px; 
     text-align: center; 
     box-shadow: var(--shadow); 
-    /* padding: 1rem 0;
-    background-color: #F9E0D9;
-    text-align: center; */
 }
 
 .index-header h1 {
@@ -126,31 +116,6 @@ main {
     font-weight: bold;
     text-decoration: none;
 }
-    
-/* .quick-links li {
-    padding: 0;
-    border-radius: 13px;
-    background: linear-gradient(135deg, #D68D91, #C87983);
-    box-shadow: 0 5px 0 #A95E70,
-                0 8px 16px rgba(93, 64, 85, 0.12);
-    transition: transform 180ms ease,
-                box-shadow 180ms ease,
-                background 180ms ease;
-    /* display: inline-block; 
-    background-color: #C98F8F;
-    color: white;
-    text-decoration: none; 
-    font-size: 18px;
-    font-weight: bold;
-    padding: 12px 24px; 
-    border-radius: 12px;
-    transition: all 0.3s ease; 
-} */
-
-/* .quick-links a:hover {
-    background-color: #A96F6F; 
-    transform: translateY(-3px);
-} */
 
 /* --- Hover effect HJ --- */
 .quick-links li:hover,
@@ -180,12 +145,6 @@ main {
     font-size: clamp(1.1rem, 2vw, 1.55rem);
     line-height: 1.6;
 }    
-/* .intro-box p {
-    font-size: clamp(1.1rem, 2vw, 1.55rem);
-    line-height: 1.6;
-    margin: 0;
-    color: var(--plum); 
-} order? */
 
 /* --- quick links originally CF / menu redesign HJ --- */
 
@@ -344,14 +303,10 @@ main {
 
 .about-heading h1 {
     color: var(--plum);
-    /* font-size: 42px; 
-    margin-bottom: 10px; */
 }
 
 .about-heading p {
     color: var(--plum);
-    /* font-size: 22px;
-    margin: 0; */
 }
 
 .about-people {
@@ -373,14 +328,10 @@ main {
     background: linear-gradient(145deg, #FFF7F0, #F3E0D4);
     box-shadow: var(--shadow);
     transition: transform 200ms ease, box-shadow 200ms ease;
-    /* background-color: #F5E9DF;
-    padding: 30px;
-    border-radius: 20px; 
-    box-sizing: border-box; */
 }
 
 .person-box:hover {
-    transform: translateY(-3px;)
+    transform: translateY(-3px);
     box-shadow: 0 16px 34px rgba(83, 49, 66, 0.18);
 }
 
@@ -404,13 +355,14 @@ main {
     text-align: center;
 }
 
-/* --- Introbox css CF --- */
-.introduction-box { 
-    background-color: #F5E9DF; 
-    padding: 30px; 
+/* --- Introbox css CF / Styling edited HJ --- */
+.introduction-box {  
+    padding: clamp(22px, 3vw, 34px); 
     width: 100%; 
-    border-radius: 20px; 
-    box-sizing: border-box; 
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 22px;
+    background: linear-gradient(145deg, #FFF7F0, #F3E0D4);
+    box-shadow: var(--shadow); 
 } 
 .introduction-box h3,
 .implicit-box h2,
@@ -485,12 +437,7 @@ main {
 /* --- Tech hero heading HJ --- */
 .hero-heading {
     text-align: center;
-   /* margin-bottom: 40px; */
 }
-/* ==============================
-    LEFT OFF HERE HJ 
-    =============================
-*/
 
 /* --- New grouped profile layout HJ --- */
 .hero-profile {
@@ -502,56 +449,57 @@ main {
     margin: 0 auto 42px;
 }
 
-.hero-heading h1 {
-    color: #5D4954;
-    font-size: 42px;
-    margin-bottom: 10px;
-}
-
-.hero-heading p {
-    color: #5D4954; 
-    font-size: 22px; 
-    line-height: 1.5;
-    max-width: 900px;
-    margin: 0 auto;
+.hero-profile-content {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    gap: 22px;
 }
 
 /* --- Tech hero boxes HJ --- */
 
-.about-hero {
-    display: flex;
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto; 
-}
-
 .hero-box {
-    flex: 1;
-    background-color: #F5E9DF;
-    padding: 30px;
-    border-radius: 20px;
-    box-sizing: border-box;
+    flex: 1 1 0;
+    min-width: 0;
+    padding: clamp(22px, 3vw, 32px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 22px;
+    background: linear-gradient(145deg, #FFF7F0, #F3E0D4);
+    box-shadow: var(--shadow);
+    transition: transform 200ms ease, box-shadow 200ms ease;
 }
 
+.hero-box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 34px rgba(83, 49, 66, 0.18);
+}
+    
 .hero-box h2 {
     color: #5D4954;
     font-size: 30px;
-    margin-top: 0;
+    margin-top: 0 0 14 px;
+}
+
+.hero-box p,
+.hero-box li {
+    font-size: clamp(1rem, 1.3vw, 1.2rem);
+    line-height: 1.65;
 }
 
 .hero-box p {
-    font-size: 20px; 
-    line-height: 1.5;
-    margin-bottom: 0;
+    margin: 0;
 }
 
 .hero-box ul {
-    font-size: 20px;
-    line-height: 1.6;
-    padding-left: 25px;
+    padding-left: 24px;
+    margin: 0;
+}
+
+.hero-box li + li {
+    margin-top: 7px;
 } 
 
-/* Janeya image CF */
+/* --- Janeya image CF / positioning and sizing edited --- HJ */
 .hero-image {
     text-align: center;
     margin: 40px auto 0;
@@ -563,24 +511,45 @@ main {
     width: min(100%, 420px);
     margin: 0 auto;
     border-radius: 20px;
-    box-shadow: 0 8px 20px rgba(93, 73, 84, 0.15);
-}
-.hero-image,
+    box-shadow: var(--shadow);
+} 
+    
+/* .hero-image,
 .about-hero {
     margin-top: 50px;
+} */
+
+.hero-profile > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    object-position: center;
+    align-self: stretch;
+    border: 4px solid rgba(255, 247, 240, 0.9);
+    border-radius: 22px;
+    box-shadow: var(--shadow);
 }
 
-/* --- Mobile display adjustment HJ --- */
- @media (max-width: 800px) {
-    .about-people {
-        flex-direction: column;
-    }
-    .about-hero {
-        flex-direction: column;
-    }
+/* --- Text/image positions on the screen HJ --- */
+.janeya-profile {
+    grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.85fr);
+}
 
-} 
+.kimberly-profile {
+    grid-template-columns: minmax(280px, 0.85fr) minmax(0, 1.35fr);
+}
 
+.kimberly-profile > img {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.kimberly-profile .hero-profile-content {
+    grid-column: 2;
+    grid-row: 1;
+}
 
 
 /* --- entrance animation HJ --- */
@@ -607,6 +576,104 @@ main {
         transition-duration: 0.01ms !important;
     }
 }
-*/
 
+/* --- Mobile display adjustment HJ --- */
+@media (max-width: 800px) {
+body {
+        padding: 16px;
+}
+
+.site-nav {
+        margin: -16px -16px 20px;
+        padding-left: 16px;
+        padding-right: 16px;
+}
+
+.menu-panel {
+        left: 16px;
+    }
+}
+@media (max-width: 480px) {
+
+body {
+        padding: 12px;
+}
+
+.site-nav {
+        margin: -12px -12px 16px;
+        padding: 9px 12px;
+}
+
+.menu-panel {
+        left: 12px;
+}
+
+.index-header {
+        padding: 24px 14px;
+}
+
+.quick-links {
+        padding: 16px 8px;
+}
+
+.quick-links ul {
+        gap: 10px;
+}
+
+.quick-links a {
+        padding: 10px 14px;
+        font-size: 0.95rem;
+}
+
+.intro-box,
+.person-box,
+.hero-box,
+.introduction-box,
+.implicit-box,
+.intersectionality-box,
+.resources-box {
+        border-radius: 17px;
+}
+
+.back-button {
+        margin-bottom: 12px;
+    }
+}
+
+/* --- Biography boxes and photos stack vertically on mobile --- HJ */
+@media (max-width: 800px) {
+
+.about-people {
+        flex-direction: column;
+        gap: 20px;
+}
+
+.hero-profile,
+.janeya-profile,
+.kimberly-profile {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        margin-bottom: 30px;
+}
+
+.hero-profile > img {
+        order: -1;
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        max-height: 440px;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+}
+
+.hero-profile-content {
+        gap: 18px;
+}
+
+.page-banner {
+        padding: 24px 18px;
+        margin-bottom: 24px;
+    }
+}
 
