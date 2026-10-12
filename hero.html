@@ -8,37 +8,55 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
-<main>
+<body class="subpage">
+
 <!-- Quick Links CF / edits by HJ-->
+    <nav class="site-nav" aria-label="Main navigation">
+        
+<!-- CSS-only hamburger menu added HJ -->
+     <input class="menu-toggle" type="checkbox" id="hero-menu-toggle">
+
+        <label class="menu-button"
+               for="hero-menu-toggle"
+               aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        
+<!-- redundant link removed HJ -->
     <section class="quick-links">
         <h2>Quick Links</h2>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
             <li><a href="implicit.html">Implicit Bias</a></li>
-            <li><a href="hero.html">Tech Heroes</a></li>
         </ul>
     </section>
 
-    <section class="hero-heading">
+<main>
+
+<!-- heading originally CF / Edits by HJ -->
+    <header class="page-banner hero-heading">
+        <a class="back-button" href="index.html">&larr; Back to Home</a>
         <h1>Tech Hero</h1>
         <p>This page highlights entrepreneur, consultant, and assistant professor, <b>Janeya Griffin</b>, and tech-industry leader, <b>Kimberly Bryant</b>, and their 
         contributions to the industry.</p>
-    </section>
+    </header>
 
 <!-- Decorative boxes HJ -->
-    <section class="about-hero">
+    <section class="hero-profile janeya-profile">
     
     <!-- Janeya Griffin CF / edits css boxes HJ -->
-    <div class="hero-box">
+    <div class="hero-profile-content">
+        <div class="hero-box">
             <h2>Who is Janeya Griffin?</h2>
         <p>Janeya Griffin, also known as "The Commercializer" is a Strategic Consultant who focuses on 
             helping new entrepreneurs in minority communities utilize their skills and intellectual assets.
             She is the founder of, Equity Space Alliance, which emphasizes the importance of equitable, diverse, and inclusive 
             practices in the space-tech industry.
         </p>
-    </div>
+        </div>
 
     <!-- Awards CF / edits css boxes HJ -->
     <div class="hero-box">
@@ -49,15 +67,21 @@
             <li><b>2016 FLC Far West Laboratory Representative of the Year</b></li>
         </ul>
     </div>
-    </section>
+        
+    </div>
   
-    <!-- Janeya image CF -->
-    <section class="hero-image">
-        <img src="imagesfolder/janeyag.jpg" alt="Janeya Griffin">
-    </section>
+    <!-- Janeya image CF / positioning edits HJ -->
+    <img src="imagesfolder/janeyag.jpg" alt="Janeya Griffin">
+    
+</section>
 
-    <!-- Kimberly Bryant CF -->
-    <section class="about-hero">
+<!-- Kimberly Bryant CF / edits HJ -->
+    <section class="hero-profile kimberly-profile">
+
+<!-- Kim image CF / positioning edits HJ -->
+    <img src="imagesfolder/kim.jpg" alt="Kimberly Bryant">
+    <div class="hero-profile-content">
+
     <div class="hero-box">
         <h2>Who is Kimberly Bryant?</h2>
         <p>Kimberly Bryant is the founder of Black Girls CODE, a nonprofit organization that focuses on
@@ -73,13 +97,13 @@
             <Li><b>Pioneer in Tech Award</b></Li>
         </ul>
     </div>
+                
+ </div>
+                
 </section>
-                 <!-- Kim image CF -->
-    <section class="hero-image">
-        <img src="imagesfolder/kim.jpg" alt="Kimberly Bryant">
-    </section>
-
+                
 
 </main>
+                
 </body>
 </html>
