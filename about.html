@@ -8,27 +8,41 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
-<main>
-    <!-- Quick links CF / edits HJ -->
-    <section class="quick-links">
-        <h2>Quick Links</h2>
-        <ul>
+<body class="subpage">
+    
+    <!-- Quick links CF / edits and menu HJ -->
+    <nav class="site-nav" aria-label="Main navigation">
+
+<!-- CSS-only hamburger menu added HJ -->
+        <input class="menu-toggle" type="checkbox" id="about-menu-toggle">
+
+        <label class="menu-button"
+               for="about-menu-toggle"
+               aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+<!-- Redundant About Us link removed HJ -->
+        <ul class="menu-panel">
             <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
             <li><a href="implicit.html">Implicit Bias</a></li>
             <li><a href="hero.html">Tech Heroes</a></li>
         </ul>
-    </section>
+    </nav>
+
+ 
+<main>
     
     <!-- Names CF / edits HJ -->
-    <section class="about-heading">
+    <header class="page-banner about-heading">
+            <a class="back-button" href="index.html">&larr; Back to Home</a>
             <h1>About Us</h1>
             <p>Cadie Franklin and Hana James</p>
-    </section>
+    </header>
 
     <!-- Decorative boxes HJ -->
-    <section class="about-people">
+    <section class="about-people" aria-label="About the authors">
         
         <!-- Cadie CF -->
         <div class="person-box">
@@ -53,6 +67,7 @@
                     I spend a lot of time outdoors, but technology is key for academics, entertainment, and my future career. 
             </p>
         </div>
+    </section>
 </main>
 </body>
 </html>
