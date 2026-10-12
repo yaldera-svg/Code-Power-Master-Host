@@ -118,8 +118,7 @@ main {
 }
 
 /* --- Hover effect HJ --- */
-.quick-links li:hover,
-.quick-links li:focus-within {
+.quick-links li:hover, .quick-links li:focus-within {
     background: linear-gradient(135deg, #E2A0A0, #C96F82);
     transform: translateY(-3px);
     box-shadow: 0 8px 0 var(--rose-hover),
@@ -224,8 +223,7 @@ main {
     text-decoration: none;
 }
 
-.menu-panel a:hover,
-.menu-panel a:focus-visible {
+.menu-panel a:hover, .menu-panel a:focus-visible {
     background: #F5DCD6;
     color: #783A52;
 }
@@ -289,8 +287,7 @@ main {
     transition: background 180ms ease, transform 180ms ease;
 }
 
-.back-button:hover,
-.back-button:focus-visible {
+.back-button:hover, .back-button:focus-visible {
     background: #D9959A;
     transform: translateY(-2px);
 }
@@ -364,26 +361,16 @@ main {
     background: linear-gradient(145deg, #FFF7F0, #F3E0D4);
     box-shadow: var(--shadow); 
 } 
-.introduction-box h3,
-.implicit-box h2,
-.implicit-box h3,
-.intersectionality-box h2,
-.resources-box h3 {
+.introduction-box h3, .implicit-box h2, .implicit-box h3, .intersectionality-box h2, .resources-box h3 {
     color: #5D4954;
 }
 
-.introduction-box h3,
-.implicit-box h2,
-.intersectionality-box h2,
-.resources-box h3 {
+.introduction-box h3, .implicit-box h2, .intersectionality-box h2, .resources-box h3 {
     font-size: 30px;
     margin-top: 0;
 }
 
-.introduction-box p,
-.implicit-box p,
-.intersectionality-box p,
-.resources-box li {
+.introduction-box p, .implicit-box p, .intersectionality-box p, .resources-box li {
     color: #5D4954;
     font-size: 20px;
     line-height: 1.6;
@@ -421,14 +408,65 @@ main {
     text-align: center;
 }
 
-/* --- Implicit, Intersectionality, Resources boxes CF --- */ 
+/* --- Implicit, Intersectionality, Resources boxes CF / styling edited HJ --- */ 
 .implicit-box, .intersectionality-box, .resources-box { 
-    background-color: #F5E9DF; 
-    padding: 30px; 
+    background: linear-gradient(145deg, #FFF7F0, #F3E0D4); 
+    padding: clamp(22px, 3vw, 34px); 
     width: 100%; 
-    border-radius: 20px; 
-    box-sizing: border-box; 
-} 
+    border-radius: 22px; 
+    box-shadow: var(--shadow);
+    transition: box-shadow 200ms ease;
+}
+
+.implicit-box:hover, .intersectionality-box:hover, .resources-box:hover {
+    box-shadow: 0 16px 34px rgba(83, 49, 66, 0.18);
+}
+
+.introduction-box h3, .implicit-box h2, .implicit-box h3, .intersectionality-box h2, .resources-box h3 {
+    color: var(--plum);
+}
+
+.introduction-box h3, .implicit-box h2, .intersectionality-box h2, .resources-box h3 {
+    font-size: clamp(1.5rem, 2.6vw, 2rem);
+    margin-top: 0;
+}
+
+.implicit-box h3 {
+    font-size: clamp(1.15rem, 2vw, 1.5rem);
+    margin-top: 24px;
+    margin-bottom: 8px;
+}
+
+.introduction-box p, .implicit-box p, .intersectionality-box p, .resources-box li {
+    color: #4F3B4B;
+    font-size: clamp(1rem, 1.35vw, 1.2rem);
+    line-height: 1.7;
+}
+
+.introduction-box p, .implicit-box p, .intersectionality-box p {
+    margin-bottom: 16px;
+}
+
+.introduction-box p:last-child, .implicit-box p:last-child, .intersectionality-box p:last-child {
+    margin-bottom: 0;
+}
+
+.resources-box ul {
+    margin-top: 10px;
+    padding-left: 25px;
+}
+
+.resources-box a, .introduction-box a, .implicit-box a, .intersectionality-box a {
+    color: #8D365A;
+    font-weight: bold;
+    text-underline-offset: 3px;
+}
+
+.resources-box a:hover, .introduction-box a:hover, .implicit-box a:hover, .intersectionality-box a:hover {
+    color: #602342;
+}
+
+
 /* --- Space between boxes CF --- */ 
 .introduction, .implicit, .intersectionality, .resources { 
     margin-bottom: 28px;
@@ -480,8 +518,7 @@ main {
     margin-top: 0 0 14 px;
 }
 
-.hero-box p,
-.hero-box li {
+.hero-box p, .hero-box li {
     font-size: clamp(1rem, 1.3vw, 1.2rem);
     line-height: 1.65;
 }
@@ -513,11 +550,6 @@ main {
     border-radius: 20px;
     box-shadow: var(--shadow);
 } 
-    
-/* .hero-image,
-.about-hero {
-    margin-top: 50px;
-} */
 
 .hero-profile > img {
     display: block;
@@ -625,13 +657,7 @@ body {
         font-size: 0.95rem;
 }
 
-.intro-box,
-.person-box,
-.hero-box,
-.introduction-box,
-.implicit-box,
-.intersectionality-box,
-.resources-box {
+.intro-box, .person-box, .hero-box, .introduction-box, .implicit-box, .intersectionality-box, .resources-box {
         border-radius: 17px;
 }
 
@@ -648,9 +674,7 @@ body {
         gap: 20px;
 }
 
-.hero-profile,
-.janeya-profile,
-.kimberly-profile {
+.hero-profile, .janeya-profile, .kimberly-profile {
         display: flex;
         flex-direction: column;
         gap: 18px;
