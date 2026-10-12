@@ -9,32 +9,61 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
-<main>
-   <!-- Quick Links CF / edits HJ-->
-    <section class="quick-links">
-        <h2>Quick Links</h2>
-        <ul>
-             <li><a href="index.html">Home</a></li>
+<body class="subpage">
+    
+   <!-- Quick Links CF / edits and menu HJ-->
+<nav class="site-nav" aria-label="Main navigation">
+
+<!-- CSS-only hamburger menu added HJ -->
+        <input class="menu-toggle" type="checkbox" id="implicit-menu-toggle">
+
+        <label class="menu-button"
+               for="implicit-menu-toggle"
+               aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+<!-- Redundant Implicit Bias link removed HJ -->
+        <ul class="menu-panel">
+            <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
-            <li><a href="implicit.html">Implicit Bias</a></li>
             <li><a href="hero.html">Tech Heroes</a></li>
         </ul>
-    </section>
-   
-    <section class="implicit-heading">
-        <h1>Implicit Bias: Educational Resources</h1>
-        <p>This page explores the concept of implicit bias and its impact on our daily lives.</p>
-    </section>
+    </nav>
+
+<main>
+
+
+    <!-- Implicit Head CF / banner and back button added HJ -->
+        <header class="page-banner implicit-heading">
+            <a class="back-button" href="index.html">&larr; Back to Home</a>
+            <h1>Implicit Bias: Educational Resources</h1>
+            <p>
+                This page explores the concept of implicit bias and its
+                impact on our daily lives.
+            </p>
+        </header>
       
-    <!-- brief introduction to implicit bias and intersectionality CF / edited wording HJ -->
+    <!-- brief introduction to implicit bias and intersectionality CF / edited wording and styling HJ -->
     <section class="introduction">
-        <div class="introduction-box">
-        <h3>A Brief Overview of Implicit Bias and Intersectionality:</h3>
-        <p>Implicit bias refers to the attitudes or stereotypes that trigger our unconscious attitudes and decisions related to a specific social group. </p>
-        <p>Intersectionality examines how various social identities such as race, gender, and class interact to create an individual's unique experiences.</p>
-        </div>
-    </section>
+            <div class="introduction-box">
+                <h3>A Brief Overview of Implicit Bias and Intersectionality</h3>
+
+                <p>
+                    <strong>Implicit bias</strong> refers to the attitudes
+                    or stereotypes that trigger our unconscious attitudes
+                    and decisions related to a specific social group.
+                </p>
+
+                <p>
+                    <strong>Intersectionality</strong> examines how various
+                    social identities such as race, gender, and class
+                    interact to create an individual's unique experiences.
+                </p>
+            </div>
+        </section>
 
     
     <!-- // Tests CF -->
@@ -44,9 +73,14 @@
 
             <!-- Experiences with implicit bias tests CF -->
             <h3>The Gender-Career Implicit Association Test</h3>
-            <p>Created by researchers at Harvard University, the <a href="https://implicit.harvard.edu/implicit/user/agg/blindspot/indexgc.htm" target="_blank">Gender-Career IAT</a> is an IBT designed to measure implicit biases related to gender and career.
-            The test tasked the user with associating "female" and "male" names with  "career"-related and "family"-related phrases, switching the associations at different stages of the test.
-                The overall results indicated that more users associated female names with family-related phrases and male names with career-related phrases.</p>
+            <p>Created by researchers at Harvard University, 
+                the <a href="https://implicit.harvard.edu/implicit/user/agg/blindspot/indexgc.htm" target="_blank">Gender-Career IAT</a> 
+                is an IBT designed to measure implicit biases related to gender and career.
+            The test tasked the user with associating "female" and "male" names with  "career"-related and "family"-related phrases, 
+                switching the associations at different stages of the test.
+                The overall results indicated that more users associated female names 
+                with family-related phrases and 
+                male names with career-related phrases.</p>
 
             <h3>The Race Implicit Association Test</h3>
             <p>Also developed by researchers at Harvard University, the <a href="https://implicit.harvard.edu/implicit/user/agg/blindspot/indexrk.htm" target="_blank">Race IAT</a> measures implicit biases related to race and ethnicity. Similar to the Gender-Career IAT, the Race IAT tasked users
@@ -57,6 +91,10 @@
             how these tests indicate one's assumptions and how exactly they are measuring implicit biases. The structure of the IAT is not a good predictor of one's
             behavior or implicit biases, as there are many explanations why one "scores" the way they do, including reaction time, time of day, internet stability and other external factors. 
             Ultimately, it is not fair to assume an individual's implicit biases based on their IAT results. </p>
+
+            <!-- IBT race test experience HJ --> 
+            <p>here is my experience.</p>
+                
             </div>
         </section>
 
