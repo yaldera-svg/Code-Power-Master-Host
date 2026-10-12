@@ -1,53 +1,142 @@
+/* --- Shared colors and global page styling reference HJ / Original color choice CF --- */
+:root {
+    --page-bg: #E8D9CC; 
+    --banner-bg: #F7D8D0; 
+    --card-bg: #FFF0E4; 
+    --rose: #C87983; 
+    --rose-hover: #A95E70; 
+    --plum: #5D4055; 
+    --ink: #33252F; 
+    --line: #D99A9A; 
+    --shadow: 0 12px 28px rgba(83, 49, 66, 0.12);
+}
+
+/* --- New global sizing rule HJ --- */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+]
+    
 /* --- Body style HJ --- */
-body{
-    background-color:  #E6DBD0;
-    padding: 32px;
+body{ 
+    background: linear-gradient (
+        135deg,
+        #F0E2D6 0%,
+        var(--page-bg) 55%,
+        #E2CFC2 100%
+    );
+    color: var(--ink);
     margin: 0; 
+    padding: 24px; 
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.6;
+}
+
+main {
+    max-width: 1500px; 
+    margin: 0 auto;
 }
 
 
-
-/* --- Content wrap style for index page CF --- */
+/* --- Content wrap style for index page CF / responsive sizing edited HJ --- */
 .content-wrap{
-    width: calc(100% - 2rem);
-    max-width: 950px;
+    /* width: calc(100% - 2rem); 
+    max-width: 950px; */
+    width: min(100%, 950px);
     margin: 0 auto;
     text-align: center;
 }
 
-.index-page {
+/* .index-page {
     margin: 0;
 }
-
+*/
+    
 .index-header {
     width: 100%;
-    padding: 1rem 0;
+    padding: 28px 20px;
+    background: linear-gradient(135deg, #FBE5DE, var(--banner-bg)); 
+    border: 2px solid var(--line); 
+    border-radius: 4px; 
+    text-align: center; 
+    box-shadow: var(--shadow); 
+    /* padding: 1rem 0;
     background-color: #F9E0D9;
-    text-align: center;
+    text-align: center; */
 }
 
-.index-header h1,
+.index-header h1 {
+    margin: 0 0 10px; 
+    color: var(--plum);
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.2;
+}
+    
 .index-header h3 {
-    color: #5D4954;
+    margin: 12px 0 0;
+    color: var(--plum);
+    font-size: clamp(1.1rem, 2vw, 1.5rem); 
 }
 
-/* --- Quick Links HJ */
+/* --- Quick Links Styling HJ --- */
 .quick-links {
     text-align: center;
-    padding: 30px 20px; 
+    padding: 20px 20px; 
 }
+    
 .quick-links h2 {
-    color: #5D4954; 
+    color: var(--plum); 
     font-size: 32px; 
     margin-bottom: 25px; 
 }
+    
 .quick-links ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
     list-style: none; 
     padding: 0;
     margin: 0;
 }
+
+/* --- Nav buttons CF / colors and shadows edited HJ --- */
 .quick-links li {
-    display: inline-block; 
+    padding: 0;
+    border: 1px solid rgba(110, 49, 71, 0.12);
+    border-radius: 13px;
+    background: linear-gradient(135deg, #D68D91, var(--rose));
+    box-shadow: 0 5px 0 var(--rose-hover),
+                0 8px 16px rgba(93, 64, 85, 0.12);
+    transition: transform 180ms ease,
+                box-shadow 180ms ease,
+                background 180ms ease;
+}
+
+.quick-links a {
+    display: block;
+    padding: 11px 22px;
+    border-radius: 13px;
+    color: #452B4A;
+    font-size: 1.05rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+    
+/* .quick-links li {
+    padding: 0;
+    border-radius: 13px;
+    background: linear-gradient(135deg, #D68D91, #C87983);
+    box-shadow: 0 5px 0 #A95E70,
+                0 8px 16px rgba(93, 64, 85, 0.12);
+    transition: transform 180ms ease,
+                box-shadow 180ms ease,
+                background 180ms ease;
+    /* display: inline-block; 
     background-color: #C98F8F;
     color: white;
     text-decoration: none; 
@@ -56,147 +145,263 @@ body{
     padding: 12px 24px; 
     border-radius: 12px;
     transition: all 0.3s ease; 
-}
-.quick-links a:hover {
+} */
+
+/* .quick-links a:hover {
     background-color: #A96F6F; 
     transform: translateY(-3px);
+} */
+
+/* --- Hover effect HJ --- */
+.quick-links li:hover,
+.quick-links li:focus-within {
+    background: linear-gradient(135deg, #E2A0A0, #C96F82);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 0 var(--rose-hover),
+                0 12px 20px rgba(93, 64, 85, 0.18);
 }
+    
 /* --- Intro page css HJ --- */
 .intro-box {
-    max-width: 1000px;
-    margin: 40px auto;
-    padding: 25px 35px;
-    background-color: #F5E9DF;
-    border-radius: 20px;
-    text-align: center; 
-}
-.intro-box p {
-    font-size: 24px;
-    line-height: 1.5;
-    margin: 0;
-    color: #5D4954;
+    max-width: 1050px;
+    margin: 10px auto 0;
+    padding: clamp(22px, 4vw, 38px); 
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    border-radius: 24px;
+    background: linear-gradient(145deg, #FFF7F0, #F4E3D7);
+    text-align: center;
+    box-shadow: var(--shadow);
+    animation: settle-in 650ms ease both;
 }
 
+.intro-box p {
+    margin: 0;
+    color: var(--plum);
+    font-size: clamp(1.1rem, 2vw, 1.55rem);
+    line-height: 1.6;
+}    
+/* .intro-box p {
+    font-size: clamp(1.1rem, 2vw, 1.55rem);
+    line-height: 1.6;
+    margin: 0;
+    color: var(--plum); 
+} order? */
+
+/* --- quick links originally CF / menu redesign HJ --- */
+
+.site-nav {
+    position: relative;
+    z-index: 10;
+    min-height: 62px;
+    margin: -24px -24px 28px;
+    padding: 10px 24px;
+    background: rgba(255, 250, 246, 0.96);
+    border-bottom: 1px solid #E6CFC7;
+    box-shadow: 0 4px 14px rgba(83, 49, 66, 0.08);
+}
+
+.menu-toggle {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+/* --- menu button HJ --- */
+.menu-button {
+    display: flex;
+    width: 44px;
+    height: 42px;
+    padding: 9px 7px;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    border-radius: 8px;
+    background: #E7E2DF;
+    border: 1px solid #C9C0BC;
+}
+.menu-button span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    border-radius: 3px;
+    background: #625D5B;
+    transition: transform 180ms ease, opacity 180ms ease;
+}
+
+/* --- Keyboard focus styling --- */
+.menu-toggle:focus-visible + .menu-button {
+    outline: 3px solid #B85F73;
+    outline-offset: 3px;
+}
+
+/* --- Dropdown links HJ --- */
+.menu-panel {
+    display: none;
+    position: absolute;
+    top: calc(100% + 2px);
+    left: 24px;
+    min-width: 220px;
+    margin: 0;
+    padding: 8px;
+    list-style: none;
+    background: #FFF8F2;
+    border: 1px solid #E3C8C1;
+    border-radius: 0 0 14px 14px;
+    box-shadow: var(--shadow);
+}
+
+.menu-panel li + li {
+    border-top: 1px solid #F0DFD8;
+}
+
+.menu-panel a {
+    display: block;
+    padding: 11px 13px;
+    border-radius: 8px;
+    color: var(--plum);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.menu-panel a:hover,
+.menu-panel a:focus-visible {
+    background: #F5DCD6;
+    color: #783A52;
+}
+
+/* --- Checkbox reveals the dropdown HJ --- */
+.menu-toggle:checked ~ .menu-panel {
+    display: block;
+}
+
+/* --- menu transforms to X HJ --- */
+.menu-toggle:checked + .menu-button span:first-child {
+    transform: translateY(10px) rotate(45deg);
+}
+
+.menu-toggle:checked + .menu-button span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle:checked + .menu-button span:last-child {
+    transform: translateY(-10px) rotate(-45deg);
+}
+
+/* --- SHARED SUBPAGE BANNER About, Implicit, and Hero headings CF / banner styling HJ --- */
+.page-banner {
+    position: relative;
+    margin: 0 0 34px;
+    padding: 28px 24px 30px;
+    border: 2px solid var(--line);
+    border-radius: 5px;
+    background: linear-gradient(135deg, #FBE5DE, var(--banner-bg));
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+.page-banner h1 {
+    margin: 0 0 8px;
+    color: var(--plum);
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    line-height: 1.2;
+}
+
+.page-banner p {
+    max-width: 950px;
+    margin: 0 auto;
+    color: var(--plum);
+    font-size: clamp(1.05rem, 2vw, 1.35rem);
+    line-height: 1.5;
+}
+
+/* --- Back button added HJ --- */
+.back-button {
+    display: inline-block;
+    margin-bottom: 14px;
+    padding: 7px 13px;
+    border-radius: 9px;
+    background: #E7B6B4;
+    color: #4E344B;
+    font-size: 0.95rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 180ms ease, transform 180ms ease;
+}
+
+.back-button:hover,
+.back-button:focus-visible {
+    background: #D9959A;
+    transform: translateY(-2px);
+}
+    
 /* --- About Us css HJ --- */
 .about-heading {
     text-align: center;
-    margin-bottom: 40px;
-
+    margin-bottom: 34px;
 }
 
 .about-heading h1 {
-    color: #5D4954;
-    font-size: 42px; 
-    margin-bottom: 10px; 
+    color: var(--plum);
+    /* font-size: 42px; 
+    margin-bottom: 10px; */
 }
 
 .about-heading p {
-    color: #5D4954;
-    font-size: 22px;
-    margin: 0;
+    color: var(--plum);
+    /* font-size: 22px;
+    margin: 0; */
 }
 
 .about-people {
     display: flex;
-    gap: 30px;
-    max-width: 1200px; 
+    align-items: stretch;
+    gap: 28px;
+    max-width: 1250px; 
     margin: 0 auto;
 } 
 
-/* Biography/individual boxes HJ */
+/* --- Biography/individual boxes HJ --- */
 
 .person-box {
-    flex: 1;
-    background-color: #F5E9DF;
+    flex: 1 1 0;
+    min-width: 0;
+    padding: clamp(22px, 3vw, 32px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 22px;
+    background: linear-gradient(145deg, #FFF7F0, #F3E0D4);
+    box-shadow: var(--shadow);
+    transition: transform 200ms ease, box-shadow 200ms ease;
+    /* background-color: #F5E9DF;
     padding: 30px;
     border-radius: 20px; 
-    box-sizing: border-box;
+    box-sizing: border-box; */
+}
+
+.person-box:hover {
+    transform: translateY(-3px;)
+    box-shadow: 0 16px 34px rgba(83, 49, 66, 0.18);
 }
 
 .person-box h2 {
-    color: #5D4954;
-    font-size: 30px;
-    margin: 0; 
+    margin: 0 0 14px;
+    color: var(--plum);
+    font-size: clamp(1.55rem, 2.5vw, 2rem);
+    line-height: 1.25;
 } 
 
 .person-box p {
-    font-size: 20px; 
-    line-height: 1.5;
-    margin-bottom: 0;
+    margin: 0;
+    font-size: clamp(1rem, 1.3vw, 1.2rem);
+    line-height: 1.65;
 }
 
-/* --- Tech hero heading HJ --- */
-.hero-heading {
+
+/* --- Implicit bias page original selections CF / card styling and spacing edited HJ --- */
+    
+.implicit-heading {
     text-align: center;
-    margin-bottom: 40px; 
-}
-
-.hero-heading h1 {
-    color: #5D4954;
-    font-size: 42px;
-    margin-bottom: 10px;
-}
-
-.hero-heading p {
-    color: #5D4954; 
-    font-size: 22px; 
-    line-height: 1.5;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-/* --- Tech hero boxes HJ --- */
-
-.about-hero {
-    display: flex;
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto; 
-}
-
-.hero-box {
-    flex: 1;
-    background-color: #F5E9DF;
-    padding: 30px;
-    border-radius: 20px;
-    box-sizing: border-box;
-}
-
-.hero-box h2 {
-    color: #5D4954;
-    font-size: 30px;
-    margin-top: 0;
-}
-
-.hero-box p {
-    font-size: 20px; 
-    line-height: 1.5;
-    margin-bottom: 0;
-}
-
-.hero-box ul {
-    font-size: 20px;
-    line-height: 1.6;
-    padding-left: 25px;
-} 
-
-/* Janeya image CF */
-.hero-image {
-    text-align: center;
-    margin: 40px auto 0;
-    max-width: 1200px;
-}
-
-.hero-image img {
-    display: block;
-    width: min(100%, 420px);
-    margin: 0 auto;
-    border-radius: 20px;
-    box-shadow: 0 8px 20px rgba(93, 73, 84, 0.15);
-}
-.hero-image,
-.about-hero {
-    margin-top: 50px;
 }
 
 /* --- Introbox css CF --- */
@@ -274,12 +479,99 @@ body{
 } 
 /* --- Space between boxes CF --- */ 
 .introduction, .implicit, .intersectionality, .resources { 
-    margin-bottom: 30px; 
+    margin-bottom: 28px;
 }
 
+/* --- Tech hero heading HJ --- */
+.hero-heading {
+    text-align: center;
+   /* margin-bottom: 40px; */
+}
+/* ==============================
+    LEFT OFF HERE HJ 
+    =============================
+*/
+
+/* --- New grouped profile layout HJ --- */
+.hero-profile {
+    display: grid;
+    grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.85fr);
+    gap: 28px;
+    align-items: stretch;
+    max-width: 1250px;
+    margin: 0 auto 42px;
+}
+
+.hero-heading h1 {
+    color: #5D4954;
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.hero-heading p {
+    color: #5D4954; 
+    font-size: 22px; 
+    line-height: 1.5;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* --- Tech hero boxes HJ --- */
+
+.about-hero {
+    display: flex;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto; 
+}
+
+.hero-box {
+    flex: 1;
+    background-color: #F5E9DF;
+    padding: 30px;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+.hero-box h2 {
+    color: #5D4954;
+    font-size: 30px;
+    margin-top: 0;
+}
+
+.hero-box p {
+    font-size: 20px; 
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+.hero-box ul {
+    font-size: 20px;
+    line-height: 1.6;
+    padding-left: 25px;
+} 
+
+/* Janeya image CF */
+.hero-image {
+    text-align: center;
+    margin: 40px auto 0;
+    max-width: 1200px;
+}
+
+.hero-image img {
+    display: block;
+    width: min(100%, 420px);
+    margin: 0 auto;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(93, 73, 84, 0.15);
+}
+.hero-image,
+.about-hero {
+    margin-top: 50px;
+}
 
 /* --- Mobile display adjustment HJ --- */
-@media (max-width: 700px) {
+ @media (max-width: 800px) {
     .about-people {
         flex-direction: column;
     }
@@ -287,7 +579,9 @@ body{
         flex-direction: column;
     }
 
-}
+} 
+
+
 
 /* --- entrance animation HJ --- */
 
@@ -301,4 +595,18 @@ body{
         transform: translateY(0);
     }
 }
+
+/* --- Respect reduced-motion preferences HJ --- */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+*/
+
 
