@@ -329,11 +329,6 @@ main {
     transition: transform 200ms ease, box-shadow 200ms ease;
 }
 
-/* .person-box:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 16px 34px rgba(83, 49, 66, 0.18);
-} */
-
 .person-box:hover, .hero-box:hover {
     transform: none;
     box-shadow: var(--shadow);
@@ -517,11 +512,6 @@ main {
     box-shadow: var(--shadow);
     transition: transform 200ms ease, box-shadow 200ms ease;
 }
-
-/* .hero-box:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 16px 34px rgba(83, 49, 66, 0.18);
-} */
     
 .hero-box h2 {
     color: #5D4954;
