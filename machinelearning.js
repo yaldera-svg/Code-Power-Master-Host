@@ -8,7 +8,7 @@ let classifer;
 
 // STEP 1: Load the model!
 function(){
-  classifer = ml5.imageClassifier('');https://teachablemachine.withgoogle.com/models/h5EIImtFh/
+  classifer = ml5.imageClassifier('');https://teachablemachine.withgoogle.com/models/S0nXhIRgv/
 }
 
 
