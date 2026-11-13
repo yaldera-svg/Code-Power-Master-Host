@@ -4,7 +4,13 @@
 // Video
 let video;
 
+let classifer;
+
 // STEP 1: Load the model!
+function(){
+  classifer = ml5.imageClassifier('');https://teachablemachine.withgoogle.com/models/h5EIImtFh/
+}
+
 
 function setup() {
   createCanvas(640, 520);
