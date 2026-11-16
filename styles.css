@@ -108,6 +108,7 @@ main {
 }
 
 .quick-links a {
+    white-space: nowrap; 
     display: block;
     padding: 11px 22px;
     border-radius: 13px;
