@@ -9,11 +9,61 @@
 </head>
 
 <body class="subpage">
-<!-- About Our Machine-->
+<!-- About Our Machine HJ -->
+    <main>
+        <header class="page-banner">
+            <h1>Our Machine</h1>
+            <p>Read our project statement and test our interactive machine learning model.</p>
+
+        <section class="machine-layout">
+            <!-- Left column: project statement HJ/CF --> 
+            <div class="machine-box">
+                <h2>Our Project Statement</h2>
+
+                <p>
+                    Project statment
+                </p>
+            </div>
+            <!-- Right column: Teachable Machine CF / Some coding by HJ --> 
+            <div class="machine-box">
+                <h2>Teachable Machine</h2>
+                <p>
+                    Try our interactive machine learning model below!
+                    Allow camera access to get started.
+                    <!-- or whatever text you want --> 
+                </p>
+
+                <p id="machine-status">
+                    Loading machine learning model...
+                </p>
+
+                <div id="machine-canvas"></div>
+
+                <p id="machine-label">
+                    Waiting for a prediction...
+                </p>
+
+            </div>
+
+        </section>
+
+         <a href="index.html" class="back-button">
+            ← Back to Home
+        </a>
 
 
-            
+    </main>
+
+
+ <!-- p5.js library HJ -->
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.min.js"></script>
+
+<!-- ml5.js library HJ -->
+    <script src="https://cdn.jsdelivr.net/npm/ml5@0.12.2/dist/ml5.min.js"></script>
+
+<!-- Separate JavaScript file link HJ / CF filled out -->
+    <script src="machine.js"></script>        
             
 
-            
+</body>            
 </html>
