@@ -778,4 +778,25 @@ body {
         border-radius: 17px;
     }
 }
+/* --- Teachable Machine Start Button CF --- */
 
+.machine-box button {
+    display: inline-block;
+    padding: 13px 32px;
+    margin: 12px 0;
+    background: linear-gradient(135deg, #D68D91, var(--rose));
+    color: var(--plum);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: 1px solid rgba(110, 49, 71, 0.12);
+    border-radius: 13px;
+    box-shadow: 0 5px 0 var(--rose-hover),
+                0 8px 16px rgba(93, 64, 85, 0.12);
+}
+
+.machine-box button:hover {
+    background: linear-gradient(135deg, #E2A0A0, #C96F82);
+    box-shadow: 0 8px 0 var(--rose-hover),
+                0 12px 20px rgba(93, 64, 85, 0.18);
+}
