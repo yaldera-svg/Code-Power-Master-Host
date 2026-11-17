@@ -800,3 +800,20 @@ body {
     box-shadow: 0 8px 0 var(--rose-hover),
                 0 12px 20px rgba(93, 64, 85, 0.18);
 }
+/* --- Demo vid style CF --- */
+
+.video-container {
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+    margin: 25px auto 0;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.video-container iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
