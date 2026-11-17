@@ -817,3 +817,28 @@ body {
     height: 100%;
     border: none;
 }
+
+/* --- Our Machine compact header HJ --- */
+
+.page-banner {
+    margin: 0 0 28px;
+    padding: 20px 24px;
+    border: 2px solid var(--line);
+    border-radius: 5px;
+    background: linear-gradient(135deg, #FBE5DE, var(--banner-bg));
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+/* --- Back button above the banner HJ --- */
+
+.back-button {
+    display: inline-block;
+    margin: 0 0 14px;
+}
+
+/* --- Machine content spacing HJ --- */
+
+.machine-layout {
+    margin-top: 0;
+}
