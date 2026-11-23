@@ -717,9 +717,9 @@ body {
 
 .machine-layout {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 28px;
-    max-width: 1250px;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+    max-width: 1100px;
     margin: 0 auto 35px;
     align-items: stretch;
 }
@@ -745,6 +745,15 @@ body {
     color: #4F3B4B;
     font-size: clamp(1rem, 1.35vw, 1.2rem);
     line-height: 1.7;
+}
+
+/* --- Project Statement Heading HJ --- */
+
+.project-statement-heading {
+    text-align: center;
+    color: var(--plum);
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    margin: 10px 0 0;
 }
 
 /* --- Machine Canvas HJ --- */
