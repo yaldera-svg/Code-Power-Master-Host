@@ -108,8 +108,11 @@ main {
 }
 
 .quick-links a {
-    white-space: nowrap; 
-    display: block;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 64px;
     padding: 11px 22px;
     border-radius: 13px;
     color: #452B4A;
