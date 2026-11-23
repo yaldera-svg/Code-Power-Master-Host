@@ -20,49 +20,19 @@
         <p>Read our project statement and test our interactive machine learning model.</p>
     </header>
 
-    <!-- Two-column layout HJ -->
+    <!-- Two-row layout HJ -->
     <section class="machine-layout">
 
-            <!-- Left column: project statement HJ/CF --> 
-            <div class="machine-box">
-                <h2>Our Project Statement</h2>
-
-                <p>
-                    Our machine is simple; throw up two fingers and it will detect a peace sign. Make a fist, lift your index and pinky finger, it will read a rock sign. Curl your fingers in any way that resembles half a heart and that’s exactly what it will see. Finally, make a fist and lift your thumb, the machine will read a thumbs up. Some of the most universal hand gestures of the western world, but with no context, or humanity, a machine must form a schema using only the data fed into it. Machines and computers are both a conglomerate and a fresh young mind waiting to be shaped. In other words, despite having a complex base, Google’s Teachable Machines independently know nothing until you train them. 
-                </p>
-                <p>
-                    Poetic irony aside, the process of training a machine requires many skills we did not anticipate. Despite having many images, the machine still needed careful attention to detail to the quality of images it trained on. This model required images that were taken directly on the website using the sample feature that the machine recognized. Though tedious, the photos taken, even if similar, were not learnable. On a larger scale, this mirrors the core struggle in <i>Unmasking AI</i> that Joy Buolamwini found in the specific facial recognition software. The software was trained on poor visual data. It had plenty of quality caucasian photos to train from, but the programmers overlooked every other community. The machine is only as good as the humans that teach it. 
-                </p>    
-                <p>   
-                Moreover, learning is doing. It's difficult to learn an issue without experimentation. Joy Buolamwini faced a massive obstacle when she encountered a software that was unable to read her face unless she wore a featureless white mask. As an experienced programmer herself, Joy knew that there was something more malignant under the surface. Her work exposed a larger issue of what centuries of underrepresentation has done to the current tech industry....
-                    </p> 
-                <p>
-                 The world of technology is not doomed. With technology rapidly evolving and more accessible than ever before, the deterministic rhetoric that some people assume is challenged by Buolamwini's work and the work of many others. On a  small scale, this project taught a simple but valuable lesson that everything can be revised. Despite struggling with new technology and having to work through issues on a topic neither of us were familiar with, we never had to do anything above minor convenience to get the machine in working order. “We do not have to accept that if AI tools have been adopted we cannot reverse course. We do not have to accept that if companies have already created a product it is a foregone conclusion that the product will be used.” - quote from book 
-                </p>
-                <p>
-                    Technology should adapt to people. This project helped us understand that developing and teaching machines involves more than improving the technology and making sure it works; it involves the people interacting with it. Although our machine was trained to recognize simple hand gestures, such as the heart symbol, peace sign, rock symbol, and thumbs-up, human behavior and decisions are still involved. Our machine recognizes these symbols, but it also may not consider an individual’s ability to make these gestures or the way in which they perform them. It serves as a surface-level take on Buolamwini’s work because it raises the question of whether technology is designed to accommodate human differences or whether people are required to fit into the categories the machine recognizes. 
-
-                </p>
-                <p>
-                    It’s important to consistently question technology. We should be careful about trusting machines and technology 100% of the time. Even though our machine correctly interprets and identifies the four hand gestures, we had a few minor hiccups with teaching the machine using the original data that we collected. This demonstrated that even when technology appears to work correctly, there can be underlying limitations that are not immediately noticeable. When Buolamwini's face was not detected by the facial recognition software she was using, she questioned why the technology failed. Instead of simply accepting the software’s results, she discovered that there were larger issues surrounding racial bias within the software’s design. Our experience taught us the significance of both questioning technological results and understanding that machines are not always reliable. 
-
-                </p>
-
-                <p>
-                Conclusion: Technology does not exist in a monolith. It is somewhat of an “imagine a billion dollars” umbrella term. Most people could not define it or conceptualize it in their mind, but they know it when they see it. To different degrees, we all interact with technology on a daily basis. These machines, like humans, make mistakes, but the repair and prevention of these mistakes relies on human intervention entirely. Artificial intelligence is far from self-sustaining, and <i>Unmasking AI</i> provides a gripping case study on this very concept. Through experimentation, refining data, programming with an adaptive mindset, and questioning results, developers can progress laterally and produce technology that reflects cultural progression. 
-                </p>
-                
-            </div>
-            <!-- Right column: Teachable Machine CF / Some coding by HJ --> 
+<!-- Top row: Teachable Machine CF / Some coding by HJ --> 
             <div class="machine-box">
                 <h2>Teachable Machine</h2>
 
                 <p>Our machine was trained on data featuring four hand gestures: the heart symbol, the peace sign, the rock symbol, and the thumbs-up sign.</p>
                 <p>Try our machine below!</p>
             <p>Allow camera access to get started.</p>
-          
-                
-<div>Our Machine</div>
+
+<!-- JS and Interactive features CF -->
+    <div>Our Machine</div>
 <button type="button" onclick="init()">Start</button>
 
 
@@ -133,7 +103,45 @@ async function predict() {
         referrerpolicy="strict-origin-when-cross-origin"
         allowfullscreen>
     </iframe>
-</div>       
+</div>  
+
+        <!-- Standalone Project Statement Heading HJ -->
+                
+             <h2 class="project-statement-heading">
+                Our Project Statement
+            </h2>
+                
+            <!-- Bottom row: project statement HJ/CF --> 
+            <div class="machine-box">
+
+                <p>
+                    Our machine is simple; throw up two fingers and it will detect a peace sign. Make a fist, lift your index and pinky finger, it will read a rock sign. Curl your fingers in any way that resembles half a heart and that’s exactly what it will see. Finally, make a fist and lift your thumb, the machine will read a thumbs up. Some of the most universal hand gestures of the western world, but with no context, or humanity, a machine must form a schema using only the data fed into it. Machines and computers are both a conglomerate and a fresh young mind waiting to be shaped. In other words, despite having a complex base, Google’s Teachable Machines independently know nothing until you train them. 
+                </p>
+                <p>
+                    Poetic irony aside, the process of training a machine requires many skills we did not anticipate. Despite having many images, the machine still needed careful attention to detail to the quality of images it trained on. This model required images that were taken directly on the website using the sample feature that the machine recognized. Though tedious, the photos taken, even if similar, were not learnable. On a larger scale, this mirrors the core struggle in <i>Unmasking AI</i> that Joy Buolamwini found in the specific facial recognition software. The software was trained on poor visual data. It had plenty of quality caucasian photos to train from, but the programmers overlooked every other community. The machine is only as good as the humans that teach it. 
+                </p>    
+                <p>   
+                Moreover, learning is doing. It's difficult to learn an issue without experimentation. Joy Buolamwini faced a massive obstacle when she encountered a software that was unable to read her face unless she wore a featureless white mask. As an experienced programmer herself, Joy knew that there was something more malignant under the surface. Her work exposed a larger issue of what centuries of underrepresentation has done to the current tech industry....
+                    </p> 
+                <p>
+                 The world of technology is not doomed. With technology rapidly evolving and more accessible than ever before, the deterministic rhetoric that some people assume is challenged by Buolamwini's work and the work of many others. On a  small scale, this project taught a simple but valuable lesson that everything can be revised. Despite struggling with new technology and having to work through issues on a topic neither of us were familiar with, we never had to do anything above minor convenience to get the machine in working order. “We do not have to accept that if AI tools have been adopted we cannot reverse course. We do not have to accept that if companies have already created a product it is a foregone conclusion that the product will be used.” - quote from book 
+                </p>
+                <p>
+                    Technology should adapt to people. This project helped us understand that developing and teaching machines involves more than improving the technology and making sure it works; it involves the people interacting with it. Although our machine was trained to recognize simple hand gestures, such as the heart symbol, peace sign, rock symbol, and thumbs-up, human behavior and decisions are still involved. Our machine recognizes these symbols, but it also may not consider an individual’s ability to make these gestures or the way in which they perform them. It serves as a surface-level take on Buolamwini’s work because it raises the question of whether technology is designed to accommodate human differences or whether people are required to fit into the categories the machine recognizes. 
+
+                </p>
+                <p>
+                    It’s important to consistently question technology. We should be careful about trusting machines and technology 100% of the time. Even though our machine correctly interprets and identifies the four hand gestures, we had a few minor hiccups with teaching the machine using the original data that we collected. This demonstrated that even when technology appears to work correctly, there can be underlying limitations that are not immediately noticeable. When Buolamwini's face was not detected by the facial recognition software she was using, she questioned why the technology failed. Instead of simply accepting the software’s results, she discovered that there were larger issues surrounding racial bias within the software’s design. Our experience taught us the significance of both questioning technological results and understanding that machines are not always reliable. 
+
+                </p>
+
+                <p>
+                Conclusion: Technology does not exist in a monolith. It is somewhat of an “imagine a billion dollars” umbrella term. Most people could not define it or conceptualize it in their mind, but they know it when they see it. To different degrees, we all interact with technology on a daily basis. These machines, like humans, make mistakes, but the repair and prevention of these mistakes relies on human intervention entirely. Artificial intelligence is far from self-sustaining, and <i>Unmasking AI</i> provides a gripping case study on this very concept. Through experimentation, refining data, programming with an adaptive mindset, and questioning results, developers can progress laterally and produce technology that reflects cultural progression. 
+                </p>
+                
+            </div>
+            
+          
 
 <!--- links to our site and data CF --->
 <a href="https://github.com/yaldera-svg/Code-Power-Master-Host/tree/main" target="blank_">Link to our data and files</a>
