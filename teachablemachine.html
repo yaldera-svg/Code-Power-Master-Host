@@ -35,7 +35,7 @@
             <p>Allow camera access to get started.</p>
 
 <!-- JS and Interactive features CF -->
-    <div>Our Machine</div>
+    <div>Hold up a heart, peace sign, rock symbol, or thumbs-up to try it out!</div>
 <button type="button" id="start-button" onclick="init()">Start</button>
 <button type="button" id="pause-button" onclick="pauseResume()" disabled>Pause</button>
 
@@ -68,7 +68,7 @@
 
         // Convenience function to setup a webcam
         const flip = true; // whether to flip the webcam
-        webcam = new tmImage.Webcam(200, 200, flip); // width, height, flip
+        webcam = new tmImage.Webcam(250, 250, flip); // width, height, flip
         await webcam.setup(); // request access to the webcam
         await webcam.play();
         document.getElementById("pause-button").disabled = false;
