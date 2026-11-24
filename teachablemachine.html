@@ -38,7 +38,7 @@
     <div>Our Machine</div>
 <p>Hold up a heart, peace sign, rock symbol, or thumbs-up to try it out!</p>
 <button type="button" onclick="init()">Start</button>
-<button type="button" id="pause-button" onclick="pauseMachine()" disabled>Pause</button>
+<button type="button" id="pause-button" onclick="pauseMachine()" disabled>Pause</button>                
 
 <div id="webcam-container"></div>
 <!-- only highest prediction -->
@@ -53,6 +53,7 @@
     const URL = "https://teachablemachine.withgoogle.com/models/S0nXhIRgv/";
 
     let model, webcam, labelContainer, maxPredictions;
+    let isPaused = false;
 
     // Load the image model and setup the webcam
     async function init() {
@@ -77,6 +78,24 @@
         document.getElementById("webcam-container").appendChild(webcam.canvas);
     }
 
+//for pausing the machine and camera
+    async function pauseMachine() {
+    isPaused = !isPaused;
+
+    const pauseButton = document.getElementById("pause-button");
+
+    if (isPaused) {
+        pauseButton.textContent = "Resume";
+        document.getElementById("predicted-label").textContent = "Paused";
+
+        webcam.webcam.pause();
+
+    } else {
+        pauseButton.textContent = "Pause";
+
+        await webcam.webcam.play();
+    }
+}
     async function loop() {
         webcam.update(); // update the webcam frame
         await predict();
