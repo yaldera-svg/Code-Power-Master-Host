@@ -36,7 +36,7 @@
 
 <!-- JS and Interactive features CF -->
     <div>Our Machine</div>
-<button type="button" onclick="init()">Start</button>
+<button type="button" id="start-button" onclick="init()">Start</button>
 
 <div id="webcam-container"></div>
 <!-- only highest prediction -->
@@ -69,6 +69,7 @@
         webcam = new tmImage.Webcam(200, 200, flip); // width, height, flip
         await webcam.setup(); // request access to the webcam
         await webcam.play();
+        document.getElementById("start-button").disabled = true;
         window.requestAnimationFrame(loop);
 
         // append elements to the DOM
