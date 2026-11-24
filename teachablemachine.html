@@ -36,7 +36,7 @@
 
 <!-- JS and Interactive features CF -->
     <div>Our Machine</div>
-<button type="button" onclick="init()">Start</button>
+<button type="button" id="start-button" onclick="init()">Start</button>
 
 <div id="webcam-container"></div>
 <!-- only highest prediction -->
@@ -50,7 +50,9 @@
     // the link to our model provided by the Teachable Machine export panel
     const URL = "https://teachablemachine.withgoogle.com/models/S0nXhIRgv/";
 
-    let model, webcam, labelContainer, maxPredictions;
+let model, webcam, labelContainer, maxPredictions;
+let isStarted = false;
+let isPaused = false;
 
     // Load the image model and setup the webcam, added disabling camera function
 
