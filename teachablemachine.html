@@ -96,12 +96,14 @@
         await webcam.webcam.play();
     }
 }
-    async function loop() {
-        webcam.update(); // update the webcam frame
+   async function loop() {
+    if (!isPaused) {
+        webcam.update();
         await predict();
-        window.requestAnimationFrame(loop);
     }
 
+    window.requestAnimationFrame(loop);
+}
     // run the webcam image through the image model
 async function predict() {
     const prediction = await model.predict(webcam.canvas);
