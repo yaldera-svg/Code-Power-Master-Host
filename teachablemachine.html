@@ -37,6 +37,7 @@
 <!-- JS and Interactive features CF -->
     <div>Our Machine</div>
 <button type="button" id="start-button" onclick="init()">Start</button>
+<button type="button" id="pause-button" onclick="pauseResume()" disabled>Pause</button>
 
 <div id="webcam-container"></div>
 <!-- only highest prediction -->
@@ -51,6 +52,7 @@
     const URL = "https://teachablemachine.withgoogle.com/models/S0nXhIRgv/";
 
     let model, webcam, labelContainer, maxPredictions;
+    let isPaused = false;
 
     // Load the image model and setup the webcam
     async function init() {
@@ -69,6 +71,7 @@
         webcam = new tmImage.Webcam(200, 200, flip); // width, height, flip
         await webcam.setup(); // request access to the webcam
         await webcam.play();
+        document.getElementById("pause-button").disabled = false;
         document.getElementById("start-button").disabled = true;
         window.requestAnimationFrame(loop);
 
@@ -77,10 +80,15 @@
     }
 
     async function loop() {
-        webcam.update(); // update the webcam frame
-        await predict();
+    if (isPaused) return;
+
+    webcam.update();
+    await predict();
+
+    if (!isPaused) {
         window.requestAnimationFrame(loop);
     }
+}
 
     // run the webcam image through the image model
 async function predict() {
@@ -95,6 +103,18 @@ async function predict() {
     // Display only the gesture name
     document.getElementById("predicted-label").textContent =
         highestPrediction.className;
+}
+    function pauseResume() {
+    if (isPaused) {
+        webcam.play();
+        isPaused = false;
+        document.getElementById("pause-button").textContent = "Pause";
+        loop();
+    } else {
+        webcam.pause();
+        isPaused = true;
+        document.getElementById("pause-button").textContent = "Resume";
+    }
 }
 </script>
 
