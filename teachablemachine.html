@@ -35,9 +35,6 @@
             <p>Allow camera access to get started.</p>
 
 <!-- JS and Interactive features CF -->
-    <div>Our Machine!</div>
-<button type="button" onclick="init()">Start</button>
-
 
 <div class="machine-instructions">
     <p>Hold up a gesture in front of your camera!</p>
@@ -80,19 +77,7 @@
 
             document.getElementById("webcam-container").appendChild(webcam.canvas);
 
-            startButton.textContent = "Camera Started";
-
             window.requestAnimationFrame(loop);
-
-        } catch (error) {
-            console.error("Camera could not start:", error);
-
-            isStarted = false;
-            startButton.disabled = false;
-            startButton.textContent = "Start";
-
-            alert("Unable to start the camera. Please allow camera access and try again.");
-        }
     }
 
     async function loop() {
